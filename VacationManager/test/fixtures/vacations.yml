@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  worker-email: MyString
+  start-date: 2017-04-06
+  end-date: 2017-04-06
+  status: MyString
+
+two:
+  worker-email: MyString
+  start-date: 2017-04-06
+  end-date: 2017-04-06
+  status: MyString
