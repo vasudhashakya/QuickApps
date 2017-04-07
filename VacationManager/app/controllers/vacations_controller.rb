@@ -25,6 +25,8 @@ class VacationsController < ApplicationController
   # POST /vacations.json
   def create
     @vacation = Vacation.new(vacation_params)
+    #Send an email (to the manager) after the vacation is created
+    VacationMailer.new_vacation(@vacation).deliver_now
 
     respond_to do |format|
       if @vacation.save
