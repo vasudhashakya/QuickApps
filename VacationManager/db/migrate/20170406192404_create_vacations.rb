@@ -5,6 +5,8 @@ class CreateVacations < ActiveRecord::Migration[5.0]
       t.date :start_date
       t.date :end_date
       t.string :status
+      t.references :users
+      t.string :current_user
 
       t.timestamps
     end
