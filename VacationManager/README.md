@@ -16,6 +16,18 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+Using Rspec, Capybara
+Spec/features
+Vacation page 
+--visit page
+--click on new vacation
+--fill in email
+--fill in start_date
+--fill in end_date
+
+--Vacation created
+--vacations path
+
 
 * Services (job queues, cache servers, search engines, etc.)
 
