@@ -28,6 +28,7 @@ class VacationsController < ApplicationController
     #Send an email (to the manager user_email) after the vacation is created
     @vacation.user_email=current_user.email
     VacationMailer.new_vacation(@vacation).deliver_now
+    
 
     respond_to do |format|
       if @vacation.save
@@ -38,8 +39,7 @@ class VacationsController < ApplicationController
         format.json { render json: @vacation.errors, status: :unprocessable_entity }
       end
     end
-    #@vacation.user_email=current_user.email
-    #vacationMailer.new_vacation(@vacation).deliver_now
+  
   end
 
   # PATCH/PUT /vacations/1
@@ -76,4 +76,5 @@ class VacationsController < ApplicationController
     def vacation_params
       params.require(:vacation).permit(:worker_email, :start_date, :end_date, :status)
     end
-end
+
+  end
